@@ -18,7 +18,7 @@ class DNSSec
 	include Options
 	include List
 
-	BIND_PATH = "/var/named/chroot"
+	BIND_PATH = "/var/named/run-root"
 	ZONE_PATH = "#{BIND_PATH}/var"
 	SAVE_PATH = "#{ZONE_PATH}/saved"
 	DNSSEC_PATH = "#{ZONE_PATH}/dnssec"  
