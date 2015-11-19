@@ -58,7 +58,7 @@ class DNSSec
 		if @reload
 			now = Time.now.to_i.to_s
 			exit if now.to_i != `#{@bin['echo']} -n #{now} > /tmp/dnssec.rb.ts && sleep 2 && #{@bin['cat']} /tmp/dnssec.rb.ts`.to_i
-			puts `#{@bin['service']} named reload`
+			puts `#{@bin['service']} bind9 reload`
 		end
 	end
 
